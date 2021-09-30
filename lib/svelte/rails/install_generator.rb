@@ -56,6 +56,7 @@ module Svelte
     end
 
     def components_dir
+      puts "components dir #{js_dir}"
       File.join(js_dir, 'components')
     end
 

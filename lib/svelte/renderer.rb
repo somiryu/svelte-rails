@@ -48,7 +48,7 @@ module Svelte
 
       # File.write(::Rails.root.join('debug.js'), initial_code)
       @context = ExecJS.compile(initial_code)
-
+      puts @context
       js_code = <<-JS
         (function(){
           return SvelteRailsUJS.serverRender('#{component_name}', #{props.to_json});
