@@ -1,10 +1,8 @@
 class SvelteRailsUJS {
   static serverRender(component_name, props) {
     const requireComponent = require.context('components', true)
-    console.log(requireComponent)
     const bundle = requireComponent('./' + component_name).default
-    console.log("-------_", bundle)
-    const {html} = bundle.render(props)
+    // const {html} = bundle.render(props)
 
     return html
   }
