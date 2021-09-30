@@ -12,6 +12,7 @@ module Svelte
     CLIENT_REQUIRE = %r{__webpack_require__\(.*webpack-dev-server\/client\/index\.js.*\n}
 
     def render(name, props = {}, options = {}, &block)
+      puts "RENDERING!!!!"
       prerender_options = options[:prerender]
 
       if prerender_options.nil?
@@ -39,6 +40,7 @@ module Svelte
     private
 
     def prerender_component(component_name, props, prerender_options)
+      puts "HEEEEREEEE------"
       initial_code = <<-JS
         var global = global || this;
         var self = self || this;
